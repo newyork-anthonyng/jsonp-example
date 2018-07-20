@@ -57,6 +57,10 @@ The server takes your calback function name, invokes it by adding an open parent
 Because of this, you are not limited to passing function names as your callback (although you would probably want to).
 https://gist.github.com/newyork-anthonyng/26932a8028239abf06b66a4ad88e02d8
 
+# More examples
+See this repository for more examples.
+* https://github.com/newyork-anthonyng/jsonp-example.
+
 # History of JSONP
 There is no official spec for JSONP, although there were some suggestions for one. You can think of JSONP as more of a hack.
 
@@ -75,7 +79,6 @@ This means all origins can safely use this resource without fear of the Same-Ori
 
 Sometimes, you don't have control over the server-code though. You would not be able to update the Response headers to include the `Access-Control-Allow-Origin` header. Another alternative is to make your own proxy server that makes the cross-origin request for you. The Same-Origin policy only applies to the browser. Servers are free to make cross-origin requests.
 # TODO: Include drawing of proxy server.
-
 
 # Resources
 * https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy

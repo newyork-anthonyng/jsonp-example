@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JSONP Example</title>
+    </head>
+    <body>
+        <div class="js-display"></div>
+
+        <script type="text/javascript">
+            const API_URL = "http://localhost:3000/proxy/api";
+
+            fetch(API_URL)
+                .then(response => response.json())
+                .then(response => {
+                    const displayEle = document.querySelector(".js-display");
+                    displayEle.innerHTML = response.text;
+                })
+        </script>
+    </body>
+</html>
