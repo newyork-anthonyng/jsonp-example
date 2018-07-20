@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JSONP Example</title>
+    </head>
+    <body>
+        <div class="js-display"></div>
+
+        <script type="text/javascript">
+            function writeResponse(response) {
+                const displayEle = document.querySelector(".js-display");
+                displayEle.innerHTML = response.text;
+            }
+            /*
+                <script> tags are not bounded by CORS.
+                The `writeResponse` function is passed in our script src, and is executed with our server data.
+            */
+        </script>
+        <script type="text/javascript" src="http://localhost:8000/api/text/jsonp?callback=writeResponse"></script>
+        <script type="text/javascript" src="http://localhost:8000/api/text/jsonp?callback=(function(a) { console.log(a); })"></script>
+    </body>
+</html>

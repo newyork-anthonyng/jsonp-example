@@ -1,0 +1,20 @@
+{
+  "name": "jsonp-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-api-server": "nodemon api-server",
+    "start-client-server": "nodemon client-server",
+    "start": "npm run start-client-server | npm run start-api-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
